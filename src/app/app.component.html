@@ -1,0 +1,33 @@
+<button (click)= makeDisappear()>Toggle</button>
+<p> {{absent}}</p>
+<div *appUnless="absent">
+    <ul>
+      <li *ngFor= "let n of names">
+        {{n}}
+      </li>
+    </ul>
+  </div>
+
+
+  <div [ngSwitch]="score">
+    <p *ngSwitchCase= "100"> Score is A </p>
+    <p *ngSwitchCase="70">Score is B</p>
+    <p *ngSwitchCase= "60">Score is C</p>
+    <p *ngSwitchDefault> Score is D </p>
+  </div>
+
+<!-- <div *ngIf = "absent">
+  <ul>
+    <li *ngFor= "let n of names">
+      {{n}}
+    </li>
+  </ul>
+</div> -->
+
+<!-- <ng-template [ngIf]= "absent">
+    <ul>
+        <li *ngFor= "let n of names">
+          {{n}}
+        </li>
+      </ul>
+</ng-template> -->
